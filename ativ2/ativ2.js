@@ -1,4 +1,4 @@
-const  nome = "Marcos";
-const dat = (new Date);
+const  nome = "Mateus";
+const dat = new Date;
 const horas = dat.toLocaleTimeString()
-console.log(`Meu nome é ${nome}. Estou aprendendo JavaScript às ${ horas} da noite`);
+console.log(`Meu nome é ${nome}. Estou aprendendo JavaScript às ${ horas} do dia de hoje`);
