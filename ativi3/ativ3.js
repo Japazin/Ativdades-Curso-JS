@@ -1,4 +1,4 @@
-
+function calculaIMC(){
 function imctrue() {
     const prompt = require('prompt-sync')();
     nome1 = prompt("Digite seu nome:");
@@ -9,8 +9,8 @@ function imctrue() {
 }
 
 imctrue();
-var imc;
-var nome1;
+let imc;
+let nome1;
 if (imc>!0){
     console.log(`O seu IMC ${nome1} é de:${imc}`)
 }
@@ -18,3 +18,5 @@ while (imc==0){
  console.log('Digite as informações conforme pedidido!!')
     imctrue();
 }
+}
+calculaIMC();
