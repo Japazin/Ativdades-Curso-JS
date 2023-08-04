@@ -84,3 +84,6 @@ form button:hover {
 .btn:hover {
   background: #fff;
 }
+.btn-eq{
+  background: rgba(22, 219, 160, 0.533)
+}
