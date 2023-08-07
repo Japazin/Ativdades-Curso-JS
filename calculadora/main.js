@@ -19,12 +19,12 @@ function criaCalculadora() {
                 if (el.classList.contains('btn-num')) this.btnParaDisplay(el.innerText);
                 if (el.classList.contains('btn-clear')) this.clearDisplay();
                 if (el.classList.contains('btn-del')) this.apagUm();
-                if (el.classList.contains('btn-eq')) this.resul();
+                if (el.classList.contains('btn-eq')) this.result();
             });
         },
         clickEnter() {
             document.addEventListener('keypress', e => {
-                if (e.code === 'Enter') this.resul();
+                if (e.code === 'Enter') this.result();
             })
         }
     };
