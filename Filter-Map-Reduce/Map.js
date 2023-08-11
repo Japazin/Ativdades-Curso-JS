@@ -6,7 +6,7 @@ const pessoas = [
     { nome: 'FRANCISCO', idade: 21 },
     { nome: 'ANA', idade: 53 }
   ];
-const dobro = arrai.map(valor=> valor*2);
+const dobro = arrai.map(valor=> valor*2);// mapea o array não podendo adicionar mais ao tamaho do array, que terá sempre o mesmo tamanho
 const pessoanomeobj= pessoas.map(obj=> ({nome: obj.nome}));
 // const id =pessoas.map(function(obj,indice){
 // return obj.id =indice +1;
