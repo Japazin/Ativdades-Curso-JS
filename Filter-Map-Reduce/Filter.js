@@ -4,7 +4,7 @@ const pessoas = [
   { nome: 'FRANCISCO', idade: 21 },
   { nome: 'ANA', idade: 53 }
 ];
-const pes = pessoas.filter(obj => obj.idade > 30);//Filter não altera o array ou objeto original podendo diminuir itens
+const pes = pessoas.filter(obj => obj.idade > 30);//Filter não altera o array ou objeto original podendo diminuir  itens
 const terminaemA= pessoas.filter(obj=> obj.nome.toLocaleLowerCase().endsWith("a"));
 const nome5indices=pessoas.filter(obj=> obj.nome.length>5);
 console.log(nome5indices);
