@@ -40,4 +40,4 @@ CPFválido.prototype.dezdigtosresult = function (cpf1) {
     return cpf;
 }
 let result = new CPFválido("705.484.450-52");
-console.log(result);
+console.log(result.cpfLimpo);
