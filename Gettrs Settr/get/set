@@ -21,7 +21,7 @@ function ProdutoObjt(nome, preco, estoque) {
 
   function criap(nomep){
     return {
-    get nomep(){
+    get nomep(){//replace troca as strings pelo outra setada
         return nomep= nomep.replace('felipe','Alves');//teste de alterar o primeiro valor que recebe como paramento
     },
     set nomep(valor){

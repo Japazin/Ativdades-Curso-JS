@@ -35,10 +35,10 @@ const testeproto= Object.create( ReturnObj.prototype, {
    nome:{value:'criado o objeto e passado o prototype'},
 });
 
-// console.log( result);
-// console.log(ob1);
+console.log( result.nome);
+console.log(ob1);
 
 console.log(testeproto.nome);
 
-// console.dir(objetoproto1);
-// console.dir(objetoproto2);
+console.dir(objetoproto1);
+console.dir(objetoproto2);

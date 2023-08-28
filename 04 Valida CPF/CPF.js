@@ -1,4 +1,4 @@
-export function CPFválido(cpfp) {
+function CPFválido(cpfp) {
     Object.defineProperty(this, "cpfLimpo", {
         enumerable: true,
         get: function () {
