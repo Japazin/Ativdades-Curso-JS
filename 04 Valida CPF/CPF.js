@@ -29,21 +29,21 @@ CPFválido.prototype.novedigtosresult = function (cpf1) {
     return cpf;
 };
 CPFválido.prototype.dezdigtosresult = function (cpf1) {
-    let cpf = [...cpf1];
-    cpf = cpf.splice(0, 10);
-   let contadoor = cpf.length + 2;
-    cpf = cpf.reduce(function (acul, valor) {
+    let cpf10 = [...cpf1];
+    cpf10 = cpf10.splice(0, 10);
+   let contadoor = cpf10.length + 2;
+    cpf10 = cpf10.reduce(function (acul, valor) {
         contadoor = contadoor - 1;
         return acul + valor * contadoor; //mutiplicação e soma dos 10 digitos
     }, 0);
-    cpf = cpf % 11;
-    cpf < 2 ? (cpf = 0) : (cpf = 11 - cpf); //verificando se é menor que 2 e retornando 0 se verdadeiro
-    return cpf;
+    cpf10 = cpf10 % 11;
+    cpf10 < 2 ? (cpf10 = 0) : (cpf10 = 11 - cpf10); //verificando se é menor que 2 e retornando 0 se verdadeiro
+    return cpf10;
 };
 CPFválido.prototype.sequenciacpf = function (cpfp) {
     const sequencia = cpfp[0].repeat(cpfp.length);
     return sequencia === cpfp;
 };
-let result = new CPFválido("070.987.720-03");
+let result = new CPFválido("070.987.770-03");
 console.log(result.cpfLimpo);
 // 705.484.450-52 070.987.720-03
