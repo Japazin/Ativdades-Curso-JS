@@ -32,7 +32,6 @@ class ValidaCPF {
   }
   calculo10digitos(cpfarray) {
     let cpf10 = cpfarray.slice(0, 10);
-    console.log(cpf10);
     let contadoor = cpf10.length + 2;
     cpf10 = cpf10.reduce(function (acul, valor) {
       contadoor = contadoor - 1;
@@ -47,6 +46,6 @@ class ValidaCPF {
     return sequencia === cpfp;
   }
 }
-const cpf = new ValidaCPF("111.111.111-11");
+const cpf = new ValidaCPF("111.111.111-52");
 
 console.log(cpf.valida());
