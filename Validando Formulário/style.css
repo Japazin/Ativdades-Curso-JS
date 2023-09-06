@@ -62,4 +62,7 @@ form button:hover {
 
 .pausado {
   color: red;
+}.erro-text{
+  font-size: 15px;
+  color: red;
 }
