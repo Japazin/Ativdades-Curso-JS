@@ -14,7 +14,7 @@ class ValidaCPF {
     const digito1verdadeiro = cpfarray[9];
     const digito2verdadeiro = cpfarray[10];
     //validação do CPF
-    // if (this.sequenciacpf(this.cpflimpo) === true) return "CPF inválido!!";
+    if (this.sequenciacpf(cpfarray)) return "CPF inválido!!";
 
     return cpf09 != digito1verdadeiro || cpf10 != digito2verdadeiro
       ? "CPF inválido!!"
@@ -42,11 +42,9 @@ class ValidaCPF {
     cpf10 < 2 ? (cpf10 = 0) : (cpf10 = 11 - cpf10); //verificando se é menor que 2 e retornando 0 se verdadeiro
     return cpf10;
   }
-  // sequenciacpf(cpfp) {
-  //   const sequencia = cpfp[0].repeat(cpfp.length);
-  //   return sequencia === cpfp;
-  // }
-}
-// const cpf = new ValidaCPF("111.111.111-11");
+  sequenciacpf() {
+    return this.cpflimpo.charAt(0).repeat(11) ===this.cpflimpo;
 
-// console.log(cpf.valida());
+  }
+
+}

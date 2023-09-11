@@ -44,6 +44,6 @@ CPFválido.prototype.sequenciacpf = function (cpfp) {
     const sequencia = cpfp[0].repeat(cpfp.length);
     return sequencia === cpfp;
 };
-let result = new CPFválido("070.987.770-03");
+let result = new CPFválido("111.111.111-11");
 console.log(result.cpfLimpo);
 // 705.484.450-52 070.987.720-03
