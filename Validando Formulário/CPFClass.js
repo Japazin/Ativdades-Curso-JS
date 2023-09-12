@@ -14,11 +14,11 @@ class ValidaCPF {
     const digito1verdadeiro = cpfarray[9];
     const digito2verdadeiro = cpfarray[10];
     //validação do CPF
-    if (this.sequenciacpf(cpfarray)) return "CPF inválido!!";
+    if (this.sequenciacpf(cpfarray)) return false;
 
     return cpf09 != digito1verdadeiro || cpf10 != digito2verdadeiro
-      ? "CPF inválido!!"
-      : "CPF Válido!!";
+      ? false
+      : true;
   }
   calculo9digitos(cpfarray) {
     let cpf9 = cpfarray.slice(0, 9);
@@ -43,8 +43,6 @@ class ValidaCPF {
     return cpf10;
   }
   sequenciacpf() {
-    return this.cpflimpo.charAt(0).repeat(11) ===this.cpflimpo;
-
+    return this.cpflimpo.charAt(0).repeat(11) === this.cpflimpo;
   }
-
 }
