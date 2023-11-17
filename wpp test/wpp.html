@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Mensagem</title>
+</head>
+<body>
+
+    <label for="numero">Número:</label>
+    <input type="text" id="numero" placeholder="Digite o número">
+
+    <label for="mensagem">Mensagem:</label>
+    <input type="text" id="mensagem" placeholder="Digite a mensagem">
+
+    <button onclick="enviarMensagem()">Enviar Mensagem</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@twilio/sdk@3.73.0/dist/umd/twilio.min.js"></script>
+    <script>
+        function enviarMensagem() {
+            var numero = document.getElementById("numero").value;
+            var mensagem = document.getElementById("mensagem").value;
+
+            // Substitua essas credenciais pelas suas próprias credenciais Twilio
+            const accountSid = 'SUA_ACCOUNT_SID';
+            const authToken = 'SEU_AUTH_TOKEN';
+            const client = require('twilio')(accountSid, authToken);
+
+            client.messages
+                .create({
+                    body: mensagem,
+                    from: 'SEU_NUMERO_TWILIO',
+                    to: numero
+                })
+                .then(message => console.log(message.sid))
+                .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
