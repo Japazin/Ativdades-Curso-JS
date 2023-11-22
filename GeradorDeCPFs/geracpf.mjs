@@ -1,6 +1,5 @@
-import ValidaCPF from "./CPFClass";
-
-
+alert("oi");
+import ValidaCPF from "./CPFClass.js";
  class GeraCPF {
 rand(min =100000000, max =999999999){
     return  String(Math.floor(Math.random()*(max -min)+min))
@@ -12,9 +11,10 @@ geranovoCPF(){
     const novoCPF = cpfSemDigito+digito1+digito2;
     return  console.log(novoCPF);
 }
-}
+};
 (function (){
     const gera = new GeraCPF();
     const cpfGerado= document.querySelector('.cpf-gerado');
     cpfGerado.innerHTML = gera.geranovoCPF();
 })
+
