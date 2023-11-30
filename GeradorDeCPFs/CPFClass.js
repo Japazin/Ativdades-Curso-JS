@@ -1,4 +1,4 @@
-export default  class ValidaCPF {
+export  default class ValidaCPF {
   constructor(cpf) {
     Object.defineProperty(this, "cpflimpo", {
       writable: true,
